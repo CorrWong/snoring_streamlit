@@ -13,7 +13,7 @@ import requests
 import streamlit as st
 
 # copy your n8n webhook PRODUCTION url here
-N8N = "https://corrwong.app.n8n.cloud/webhook/snore-analysis"
+N8N = "https://corrwong243.app.n8n.cloud/webhook/snore-analysis"
 
 st.title("Snore Analysis Assistant")
 st.caption("Upload a sleep recording to analyze snoring patterns and get "
