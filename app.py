@@ -22,7 +22,7 @@ st.caption("Upload a sleep recording to analyze snoring patterns and get "
  
 # ---- User information (Trigger Layer inputs) ----
 name = st.text_input("Name", "Jane Tan")
-email = st.text_input("Email (for the report and alerts)", "jane@example.com")
+email = st.text_input("Email", "jane@example.com")
 age = st.slider("Age", 18, 90, 35)
 gender = st.selectbox("Gender", ["Female", "Male"])
 weight = st.number_input("Weight (kg)", 30.0, 200.0, 65.0)
@@ -34,7 +34,7 @@ audio = st.file_uploader("Sleep recording",
  
 if st.button("Analyze & recommend"):
     if audio is None:
-        st.error("Please upload a WAV recording first.")
+        st.error("Please upload a valid recording first.")
         st.stop()
  
     bmi = round(weight / ((height / 100) ** 2), 1)
